@@ -31,18 +31,19 @@
             this.dgvEmployeeList = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.placeholderTextBox7 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox6 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox5 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox4 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox3 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox2 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.placeholderTextBox1 = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.dgvCopy = new System.Windows.Forms.DataGridView();
+            this.ptbAge = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbSalary = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbLastName = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbOffice = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbMiddleName = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbPosition = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
+            this.ptbFirstName = new MVPPatternDEMO.CustomControls.PlaceholderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCopy)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEmployeeList
@@ -59,13 +60,13 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox7, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox6, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox5, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.placeholderTextBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ptbAge, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ptbSalary, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ptbLastName, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.ptbOffice, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ptbMiddleName, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ptbPosition, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ptbFirstName, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 58);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -86,139 +87,139 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Employee Details:";
             // 
-            // placeholderTextBox7
+            // btnAdd
             // 
-            this.placeholderTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox7.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox7.Location = new System.Drawing.Point(3, 114);
-            this.placeholderTextBox7.Name = "placeholderTextBox7";
-            this.placeholderTextBox7.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox7.PlaceholderText = "Age";
-            this.placeholderTextBox7.Size = new System.Drawing.Size(159, 26);
-            this.placeholderTextBox7.TabIndex = 6;
-            this.placeholderTextBox7.Text = "Age";
+            this.btnAdd.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Location = new System.Drawing.Point(15, 256);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Visible = false;
             // 
-            // placeholderTextBox6
+            // btnDelete
             // 
-            this.placeholderTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox6.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox6.Location = new System.Drawing.Point(168, 77);
-            this.placeholderTextBox6.Name = "placeholderTextBox6";
-            this.placeholderTextBox6.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox6.PlaceholderText = "Salary";
-            this.placeholderTextBox6.Size = new System.Drawing.Size(160, 26);
-            this.placeholderTextBox6.TabIndex = 5;
-            this.placeholderTextBox6.Text = "Salary";
+            this.btnDelete.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Location = new System.Drawing.Point(110, 256);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             // 
-            // placeholderTextBox5
+            // dgvCopy
             // 
-            this.placeholderTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox5.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox5.Location = new System.Drawing.Point(3, 77);
-            this.placeholderTextBox5.Name = "placeholderTextBox5";
-            this.placeholderTextBox5.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox5.PlaceholderText = "Last Name";
-            this.placeholderTextBox5.Size = new System.Drawing.Size(159, 26);
-            this.placeholderTextBox5.TabIndex = 4;
-            this.placeholderTextBox5.Text = "Last Name";
+            this.dgvCopy.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvCopy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCopy.Location = new System.Drawing.Point(819, 12);
+            this.dgvCopy.Name = "dgvCopy";
+            this.dgvCopy.Size = new System.Drawing.Size(439, 426);
+            this.dgvCopy.TabIndex = 5;
             // 
-            // placeholderTextBox4
+            // ptbAge
             // 
-            this.placeholderTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox4.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox4.Location = new System.Drawing.Point(168, 40);
-            this.placeholderTextBox4.Name = "placeholderTextBox4";
-            this.placeholderTextBox4.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox4.PlaceholderText = "Office";
-            this.placeholderTextBox4.Size = new System.Drawing.Size(160, 26);
-            this.placeholderTextBox4.TabIndex = 3;
-            this.placeholderTextBox4.Text = "Office";
+            this.ptbAge.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbAge.ForeColor = System.Drawing.Color.Gray;
+            this.ptbAge.Location = new System.Drawing.Point(3, 114);
+            this.ptbAge.Name = "ptbAge";
+            this.ptbAge.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbAge.PlaceholderText = "Age";
+            this.ptbAge.Size = new System.Drawing.Size(159, 26);
+            this.ptbAge.TabIndex = 6;
+            this.ptbAge.Text = "Age";
             // 
-            // placeholderTextBox3
+            // ptbSalary
             // 
-            this.placeholderTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox3.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox3.Location = new System.Drawing.Point(3, 40);
-            this.placeholderTextBox3.Name = "placeholderTextBox3";
-            this.placeholderTextBox3.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox3.PlaceholderText = "Middle Name";
-            this.placeholderTextBox3.Size = new System.Drawing.Size(159, 26);
-            this.placeholderTextBox3.TabIndex = 2;
-            this.placeholderTextBox3.Text = "Middle Name";
+            this.ptbSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbSalary.ForeColor = System.Drawing.Color.Gray;
+            this.ptbSalary.Location = new System.Drawing.Point(168, 77);
+            this.ptbSalary.Name = "ptbSalary";
+            this.ptbSalary.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbSalary.PlaceholderText = "Salary";
+            this.ptbSalary.Size = new System.Drawing.Size(160, 26);
+            this.ptbSalary.TabIndex = 5;
+            this.ptbSalary.Text = "Salary";
             // 
-            // placeholderTextBox2
+            // ptbLastName
             // 
-            this.placeholderTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox2.Location = new System.Drawing.Point(168, 3);
-            this.placeholderTextBox2.Name = "placeholderTextBox2";
-            this.placeholderTextBox2.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox2.PlaceholderText = "Position";
-            this.placeholderTextBox2.Size = new System.Drawing.Size(160, 26);
-            this.placeholderTextBox2.TabIndex = 1;
-            this.placeholderTextBox2.Text = "Position";
+            this.ptbLastName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbLastName.ForeColor = System.Drawing.Color.Gray;
+            this.ptbLastName.Location = new System.Drawing.Point(3, 77);
+            this.ptbLastName.Name = "ptbLastName";
+            this.ptbLastName.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbLastName.PlaceholderText = "Last Name";
+            this.ptbLastName.Size = new System.Drawing.Size(159, 26);
+            this.ptbLastName.TabIndex = 4;
+            this.ptbLastName.Text = "Last Name";
             // 
-            // placeholderTextBox1
+            // ptbOffice
             // 
-            this.placeholderTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.placeholderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.placeholderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.placeholderTextBox1.Name = "placeholderTextBox1";
-            this.placeholderTextBox1.PlaceholderColor = System.Drawing.Color.Gray;
-            this.placeholderTextBox1.PlaceholderText = "First Name";
-            this.placeholderTextBox1.Size = new System.Drawing.Size(159, 26);
-            this.placeholderTextBox1.TabIndex = 0;
-            this.placeholderTextBox1.Text = "First Name";
+            this.ptbOffice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbOffice.ForeColor = System.Drawing.Color.Gray;
+            this.ptbOffice.Location = new System.Drawing.Point(168, 40);
+            this.ptbOffice.Name = "ptbOffice";
+            this.ptbOffice.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbOffice.PlaceholderText = "Office";
+            this.ptbOffice.Size = new System.Drawing.Size(160, 26);
+            this.ptbOffice.TabIndex = 3;
+            this.ptbOffice.Text = "Office";
             // 
-            // button1
+            // ptbMiddleName
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(15, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ptbMiddleName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbMiddleName.ForeColor = System.Drawing.Color.Gray;
+            this.ptbMiddleName.Location = new System.Drawing.Point(3, 40);
+            this.ptbMiddleName.Name = "ptbMiddleName";
+            this.ptbMiddleName.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbMiddleName.PlaceholderText = "Middle Name";
+            this.ptbMiddleName.Size = new System.Drawing.Size(159, 26);
+            this.ptbMiddleName.TabIndex = 2;
+            this.ptbMiddleName.Text = "Middle Name";
             // 
-            // button2
+            // ptbPosition
             // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(110, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ptbPosition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbPosition.ForeColor = System.Drawing.Color.Gray;
+            this.ptbPosition.Location = new System.Drawing.Point(168, 3);
+            this.ptbPosition.Name = "ptbPosition";
+            this.ptbPosition.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbPosition.PlaceholderText = "Position";
+            this.ptbPosition.Size = new System.Drawing.Size(160, 26);
+            this.ptbPosition.TabIndex = 1;
+            this.ptbPosition.Text = "Position";
             // 
-            // button3
+            // ptbFirstName
             // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(265, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ptbFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ptbFirstName.ForeColor = System.Drawing.Color.Gray;
+            this.ptbFirstName.Location = new System.Drawing.Point(3, 3);
+            this.ptbFirstName.Name = "ptbFirstName";
+            this.ptbFirstName.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ptbFirstName.PlaceholderText = "First Name";
+            this.ptbFirstName.Size = new System.Drawing.Size(159, 26);
+            this.ptbFirstName.TabIndex = 0;
+            this.ptbFirstName.Text = "First Name";
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1270, 450);
+            this.Controls.Add(this.dgvCopy);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dgvEmployeeList);
@@ -228,6 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeList)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCopy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,17 +239,17 @@
 
         private System.Windows.Forms.DataGridView dgvEmployeeList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private CustomControls.PlaceholderTextBox placeholderTextBox7;
-        private CustomControls.PlaceholderTextBox placeholderTextBox6;
-        private CustomControls.PlaceholderTextBox placeholderTextBox5;
-        private CustomControls.PlaceholderTextBox placeholderTextBox4;
-        private CustomControls.PlaceholderTextBox placeholderTextBox3;
-        private CustomControls.PlaceholderTextBox placeholderTextBox2;
-        private CustomControls.PlaceholderTextBox placeholderTextBox1;
+        private CustomControls.PlaceholderTextBox ptbAge;
+        private CustomControls.PlaceholderTextBox ptbSalary;
+        private CustomControls.PlaceholderTextBox ptbLastName;
+        private CustomControls.PlaceholderTextBox ptbOffice;
+        private CustomControls.PlaceholderTextBox ptbMiddleName;
+        private CustomControls.PlaceholderTextBox ptbPosition;
+        private CustomControls.PlaceholderTextBox ptbFirstName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridView dgvCopy;
     }
 }
 

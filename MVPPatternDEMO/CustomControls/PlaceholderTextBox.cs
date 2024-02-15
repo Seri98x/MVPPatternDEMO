@@ -12,9 +12,6 @@ namespace MVPPatternDEMO.CustomControls
         public PlaceholderTextBox()
         {
             InitializeComponent();
-
-        
-         
         }
 
         protected override void OnCreateControl()

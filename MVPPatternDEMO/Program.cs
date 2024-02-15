@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MVPPatternDEMO.Interfaces;
+using MVPPatternDEMO.Repositories;
+using MVPPatternDEMO.ViewPresenters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +19,18 @@ namespace MVPPatternDEMO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+
+
+
+            IMainView mainView = new MainView();
+
+            IEmployeeRepository employeeRepository = new EmployeeRepository();
+
+
+            new MainViewPresenter(mainView, employeeRepository);
+
+
+            Application.Run((Form)mainView);
         }
     }
 }
